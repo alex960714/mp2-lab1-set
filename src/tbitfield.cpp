@@ -139,9 +139,9 @@ istream &operator>>(istream &istr, TBitField &bf) // ввод
 	int i=0;
 	char n='0';
 	istr>>n;
-	while ((n='0')||(n='1'))
+	while (((n=='0')||(n=='1'))&&(i<bf.BitLen))
 	{
-		if (n='0')
+		if (n=='0')
 			bf.ClrBit(i);
 		else bf.SetBit(i);
 		i++;
